@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ubermelon Order Form</title>
+    </head>
+
+    <body>
+        <h1>Orders!</h1>
+        <h3>Prices</h3>
+        <table>
+            <tr>
+                <th>Melon Name</th><th></th><th>Price per lb.</th>
+            </tr>
+            <tr>
+                <td>Watermelon</td>
+                <td><a href='https://en.wikipedia.org/wiki/Watermelon' target='_blank'><img src='sm_watermelon.jpg'></a></td>
+                <td>$1.59</td>
+            </tr>
+            <tr>
+                <td>Honeydew</td>
+                <td><a href='https://en.wikipedia.org/wiki/Honeydew_(melon)' target='_blank'><img src='honeydew.jpg'></a></td>
+                <td>$0.99</td>
+            </tr>
+            <tr>
+                <td>Cantaloupe</td>
+                <td><a href='https://en.wikipedia.org/wiki/Cantaloupe' target='_blank'><img src='cantaloupe.jpg'></a></td>
+                <td>$1.29</td>
+            </tr>
+            <tr>
+                <td>Crenshaw</td>
+                <td><a href='https://en.wikipedia.org/wiki/Muskmelon' target='_blank'><img src='crenshaw.jpg'></a></td>
+                <td>$2.19</td>
+            </tr>
+            <tr>
+                <td>Canary</td>
+                <td><a href='https://en.wikipedia.org/wiki/Canary_melon' target='_blank'><img src='canary.jpg'></a></td>
+                <td>$11.99</td>
+            </tr>
+        </table>
+
+        <form id="progressive-validation" action='https://ubermelon-order-form.herokuapp.com/process'>
+            <br>First Name: <input type='text' name='firstname'>
+            <br>Last Name: <input type='text' name='lastname'>
+            <br>Melon Type: <select name='melontype'>
+                            <option value='watermelon'>Watermelon</option>
+                            <option value='honeydew'>Honeydew</option>
+                            <option value='cantaloupe'>Cantaloupe</option>
+                            <option value='crenshaw'>Crenshaw</option>
+                            <option value='canary'>Canary</option>
+                        </select>
+            <br>Quantity: <input type='text' name='quantity'>
+            <br>Delivery Time: <input type='radio' name='time' value='am'> AM
+                            <input type='radio' name='time' value='pm'> PM
+                            <input type='radio' name='time' value='wat'> WAT
+            <br>Returning Customer: <input type='radio' name='returning' value='yes' required> Yes
+                                <input type='radio' name='returning' value='no' required> No
+            <br>If you are a returning customer, please enter your username  password:
+            <br>Username: <input type='text' name='username'>
+            <br>Password: <input type='password' name='password'>
+            <br>Statistics: <input type='checkbox' name='stat' value='dog'> Dog
+                        <input type='checkbox' name='stat' value='cat'> Cat
+                        <input type='checkbox' name='stat' value='hedgehog'> Hedgehog
+                        <input type='checkbox' name='stat' value='balloonicorn'> Balloonicorn
+                        <input type='checkbox' name='stat' value='yak'> Yak
+            <br><input type='submit' value='SEND'>
+
+        </form>
+    </body>
+
+    <footer>
+        <p>* Quantities given are by the flat.</p>
+    </footer>
+
+</html>
